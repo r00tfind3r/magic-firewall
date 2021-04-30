@@ -121,7 +121,6 @@ def clearFields(window=None):
   nop = None
   keys_to_clear = ['-DIRECTION-', '-INTERFACE-', '-PROTOCOL-', '-SRCIP-', '-SPORT-', '-DSTIP-', '-DPORT-', '-ACTION-', '-NEWCON-', '-ESTCON-', '-RELCON-']
   for key in keys_to_clear:
-    print("clearing", key)
     window[key]('') if window else nop
 
 def addRule(values):
