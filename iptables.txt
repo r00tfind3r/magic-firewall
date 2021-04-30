@@ -1,0 +1,5 @@
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P FORWARD ACCEPT
+-A OUTPUT -p icmp -m icmp --icmp-type 0 -j DROP
+-A INPUT -p tcp -m tcp --dport 9887 -m conntrack --ctstate NEW,RELATED,ESTABLISHED -j REJECT --reject-with icmp-port-unreachable

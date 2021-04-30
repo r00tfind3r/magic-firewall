@@ -1,0 +1,2 @@
+language = "python3"
+run = "./magic-firewall.py TEST"
