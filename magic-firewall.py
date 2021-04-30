@@ -99,7 +99,7 @@ def getCurrentStatus(window):
   if PROD:
     command = 'iptables -S'
   else:
-    command = 'cat iptables.txt'
+    command = 'cat testfiles/iptables.txt'
 
   current_status = runRealCommand(command)
   window['-STATUS-'].Update(values=current_status)
